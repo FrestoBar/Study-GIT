@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Лабораторная работа №6</title>
+
+    <style type="text/css">
+        fon {
+            position: absolute;
+            width:100%;
+            height:100%;
+            background: url(banan.gif);
+            /*transform: rotate(180deg);*/
+        }
+        h1{
+            /*transform:rotate(180deg);*/
+            text-align:center;
+            vertical-align:top;
+        }
+        div {
+            background-image: url(parrot.gif);
+            background-size: 100px 100px;
+            height: 200px;
+            width: 200px;
+            overflow: auto;
+            /* Параметры полос прокрутки для IE */
+            scrollbar-face-color: red; /* цвет бегунка */
+            scrollbar-track-color: #50b0e0; /* цвет полос прокрутки */
+            scrollbar-arrow-color: yellow; /* цвет стрелок на кнопках */
+        }
+            /* Параметры полос прокрутки для Chrome, Opera и Safari */
+            div::-webkit-scrollbar { /* ширина полос прокрутки */
+                height: 16px;
+                width: 16px;
+            }
+
+            div::-webkit-scrollbar-thumb { /* фон бегунка */
+                background-color: red;
+            }
+
+            div::-webkit-scrollbar-button:start { /* фон начальной кнопки */
+                background-color: yellow;
+            }
+
+            div::-webkit-scrollbar-button:end { /* фон конечной кнопки */
+                background-color: chartreuse;
+            }
+
+            div::-webkit-scrollbar-track-piece { /* фон поверхности движения */
+                background-color: #50b0e0;
+            }
+    </style>
+
+</head>
+<body>
+    <fon>
+        <h1>
+            Лабораторная работа №6
+        </h1>
+        <p>Тут должен быть какой нибудь текст</p>
+        <video width="400" height="300" controls="controls" poster="" autoplay>
+
+            <source src="Frog.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
+
+        </video>
+        <audio autoplay loop controls>
+            <source src="popugai.mp3" type="audio/mp3">
+        </audio>
+        <img src="frog.gif"  style="position:absolute; border:10px inset yellow;float:right;"/>
+        <div name="d"><img src="parrot.gif"></div>
+        <img src="dog.gif" style="position:absolute;clip:rect(0px, 250px, 120px, 100px);"/>
+    </fon>
+</body>
+</html>
